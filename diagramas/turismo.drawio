@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0" version="29.4.0">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="991" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="MPL5H7Uoygr92GNi26lR-1" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;TIEMPO&lt;/div&gt;&lt;div&gt;-id_tiempo&lt;/div&gt;&lt;div&gt;-año&lt;/div&gt;&lt;div&gt;-mes&lt;/div&gt;&lt;div&gt;-trimestre&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="120" x="320" y="292.5" as="geometry" />
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-7" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;HECHO_TURISMO_PAIS&lt;/div&gt;&lt;div&gt;-id_tiempo&lt;/div&gt;&lt;div&gt;-id_pais&lt;/div&gt;&lt;div&gt;-numero_turistas&lt;/div&gt;&lt;div&gt;-variacion_anual&lt;/div&gt;&lt;div&gt;-acumulado&lt;/div&gt;&lt;div&gt;-variacion_acumulada&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="190" x="530" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-8" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;DIM_PAIS&lt;/div&gt;&lt;div&gt;-id_pais&lt;/div&gt;&lt;div&gt;-nombre-pais&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="565" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-9" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;HECHO_TURISMO_COMUNIDAD&lt;/div&gt;&lt;div&gt;-id_tiempo&lt;/div&gt;&lt;div&gt;-id_comunidad&lt;/div&gt;&lt;div&gt;-numero_turista&lt;/div&gt;&lt;div&gt;-variacion_anual&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="230" x="90" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-10" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;DIM_COMUNIDAD&lt;/div&gt;&lt;div&gt;-id_comunidad&lt;/div&gt;&lt;div&gt;-nombre_comunidad&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="145" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-11" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MPL5H7Uoygr92GNi26lR-10" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MPL5H7Uoygr92GNi26lR-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="390" as="sourcePoint" />
+            <mxPoint x="440" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-12" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MPL5H7Uoygr92GNi26lR-9" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MPL5H7Uoygr92GNi26lR-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="390" as="sourcePoint" />
+            <mxPoint x="440" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-13" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MPL5H7Uoygr92GNi26lR-1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="MPL5H7Uoygr92GNi26lR-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="390" as="sourcePoint" />
+            <mxPoint x="440" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MPL5H7Uoygr92GNi26lR-14" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MPL5H7Uoygr92GNi26lR-7" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MPL5H7Uoygr92GNi26lR-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="390" as="sourcePoint" />
+            <mxPoint x="440" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

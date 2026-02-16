@@ -1,1 +1,15 @@
+# credenciales
+.env
 
+# entorno virtual
+.venv/
+
+# python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# (opcional) no subir excels
+data/*.xlsx
