@@ -2,12 +2,7 @@ import re
 import unicodedata
 import pandas as pd
 
-MONTH_RE = re.compile(r"^\d{4}M\d{2}$", re.IGNORECASE)
-
-def get_conn():
-    # Puedes mover aquí tu get_conn o importarlo desde db
-    from etl.db import get_conn as db_get_conn
-    return db_get_conn()
+MONTH_RE = re.compile(r"\d{4}M\d{2}", re.IGNORECASE)
 
 def normalize_text(s: str) -> str:
     if s is None:
@@ -19,7 +14,6 @@ def normalize_text(s: str) -> str:
     return s
 
 def parse_month(col: str):
-    # Convierte "2025M01" en (2025, 1, 1)
     y = int(col[:4])
     m = int(col[-2:])
     t = (m - 1) // 3 + 1
@@ -41,11 +35,27 @@ def to_number(x):
 
 def find_month_columns(df):
     month_cols = []
-    for i in range(min(30, df.shape[0])):
+    # Busca en todo el archivo, sin límite de 30 filas
+    for i in range(df.shape[0]):
         for j in range(df.shape[1]):
             val = df.iloc[i, j]
-            if isinstance(val, str) and MONTH_RE.match(val.strip()):
-                month_cols.append((j, val.strip()))
+            if isinstance(val, str):
+                # Quitamos espacios y buscamos el patrón
+                limpio = val.strip().replace(" ", "")
+                match = MONTH_RE.search(limpio)
+                if match:
+                    # Guardamos la versión limpia (ej: '2023M11')
+                    month_cols.append((j, match.group(0)))
+        
         if month_cols:
             break
+            
     return month_cols
+
+def month_name_es(m: int) -> str:
+    names = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"]
+    return names[m-1] if 1 <= m <= 12 else ""
+
+def first_day_of_month(y: int, m: int):
+    # devolvemos string YYYY-MM-01 (DATE lo parsea bien)
+    return f"{y:04d}-{m:02d}-01"
