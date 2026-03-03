@@ -7,7 +7,7 @@ from etl.utils import normalize_text, to_number, month_name_es, first_day_of_mon
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_FILE = BASE_DIR / "data" / "23988.xlsx"
 
-# Nuevo buscador solo para años (ej: 2024)
+
 YEAR_RE = re.compile(r"^\d{4}$")
 
 def load_excel():
@@ -18,7 +18,7 @@ def find_year_columns(df):
     for i in range(min(100, df.shape[0])):
         for j in range(df.shape[1]):
             val = df.iloc[i, j]
-            # Pandas a veces lee los años como 2024.0, así que lo limpiamos
+            
             if isinstance(val, (str, int, float)):
                 val_str = str(val).split('.')[0].strip()
                 if YEAR_RE.match(val_str):
@@ -67,7 +67,7 @@ def extract_rows(df):
                 val = to_number(df.iloc[i, j])
                 if val is None: continue
                 
-                # Aquí está el truco: le asignamos mes 12 y trimestre 4 por ser dato anual
+                
                 anio = int(colname)
                 mes = 12 
                 trimestre = 4

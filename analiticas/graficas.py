@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 from etl.db import get_conn
 
-# Configuración de carpetas
+
 BASE_DIR = Path(__file__).resolve().parents[1]
 OUT_DIR = BASE_DIR / "analytics" / "out"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -12,7 +12,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 def query_df(sql: str, params=None) -> pd.DataFrame:
     conn = get_conn()
     try:
-        # Pandas avisa a veces sobre pasar la conexión directa, pero con mysql-connector es seguro.
+       
         import warnings
         with warnings.catch_warnings():
             warnings.simplefilter('ignore')
